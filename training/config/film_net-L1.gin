@@ -29,7 +29,7 @@ training.learning_rate_staircase = True
 training.num_steps = 3000000
 
 # in the sweep
-training_dataset.file = 'gs://xcloud-shared/fitsumreda/frame_interpolation/datasets/vimeo_interp_train.tfrecord@200'
+training_dataset.file = '/share/jshe2377/atd12k_tfrecords/new_output_tfrecord_filepath@5'
 training_dataset.batch_size = 8
 training_dataset.crop_size = 256
 
