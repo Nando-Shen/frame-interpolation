@@ -31,18 +31,12 @@ training.num_steps = 3000000
 # in the sweep
 training_dataset.file = '/share/jshe2377/atd12k_tfrecords/new_output_tfrecord_filepath@5'
 training_dataset.batch_size = 8
-training_dataset.crop_size = 256
+training_dataset.crop_size = 224
 
 eval_datasets.batch_size = 1
 eval_datasets.max_examples = -1
-# eval_datasets.files = ['gs://xcloud-shared/fitsumreda/frame_interpolation/datasets/vimeo_interp_test.tfrecord@3',
-#                       'gs://xcloud-shared/fitsumreda/frame_interpolation/datasets/middlebury_other.tfrecord@3',
-#                       'gs://xcloud-shared/fitsumreda/frame_interpolation/datasets/UCF101_interp_test.tfrecord@2',
-#                       'gs://xcloud-shared/fitsumreda/frame_interpolation/datasets/xiph_2K.tfrecord@2',
-#                       'gs://xcloud-shared/fitsumreda/frame_interpolation/datasets/xiph_4K.tfrecord@2']
-# eval_datasets.names = ['vimeo90K', 'middlebury', 'ucf101', 'xiph2K', 'xiph4K']
-eval_datasets.files = []
-eval_datasets.names = []
+eval_datasets.files = ['/share/jshe2377/atd12k_test_tfrecords/new_output_test_tfrecord_filepath@2']
+eval_datasets.names = ['atd_12k']
 
 # Training augmentation (in addition to random crop)
 data_augmentation.names = ['random_image_rot90', 'random_flip', 'random_rotate', 'random_reverse']
