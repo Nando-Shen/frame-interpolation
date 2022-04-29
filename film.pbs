@@ -6,11 +6,8 @@
 
 cd /home/jshe2377/frame-interpolation
 
-bash Miniconda3-4.5.11-Linux-x86_64.sh -b -p miniconda
+module load cuda/11.0.0
 
-module load cuda/11.2.0
-
-miniconda/bin/conda create -n film python=3.7
 source miniconda/bin/activate film
 
 pip install -r requirements.txt
