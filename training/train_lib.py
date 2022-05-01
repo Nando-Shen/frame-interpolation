@@ -135,7 +135,7 @@ def train_loop(
     save_summaries_frequency: int = 500,
     save_checkpoint_frequency: int = 500,
     checkpoint_max_to_keep: int = 10,
-    checkpoint_save_every_n_hours: float = 2.,
+    checkpoint_save_every_n_hours: float = 1.,
     timing_frequency: int = 100,
     logging_frequency: int = 10):
   """A Tensorflow 2 eager mode training loop.
