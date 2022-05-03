@@ -134,10 +134,10 @@ def train_loop(
     num_iterations: int,
     save_summaries_frequency: int = 500,
     save_checkpoint_frequency: int = 500,
-    checkpoint_max_to_keep: int = 10,
+    checkpoint_max_to_keep: int = 3,
     checkpoint_save_every_n_hours: float = 1.,
     timing_frequency: int = 100,
-    logging_frequency: int = 10):
+    logging_frequency: int = 100):
   """A Tensorflow 2 eager mode training loop.
 
   Args:
@@ -327,8 +327,8 @@ def train(strategy: tf.distribute.Strategy, train_folder: str,
       train_folder=train_folder,
       saved_model_folder=saved_model_folder,
       num_iterations=n_iterations,
-      save_summaries_frequency=3000,
-      save_checkpoint_frequency=3000)
+      save_summaries_frequency=5000,
+      save_checkpoint_frequency=5000)
 
 
 def get_strategy(mode) -> tf.distribute.Strategy:
