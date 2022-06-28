@@ -327,8 +327,8 @@ def train(strategy: tf.distribute.Strategy, train_folder: str,
       train_folder=train_folder,
       saved_model_folder=saved_model_folder,
       num_iterations=n_iterations,
-      save_summaries_frequency=5000,
-      save_checkpoint_frequency=5000)
+      save_summaries_frequency=15000,
+      save_checkpoint_frequency=15000)
 
 
 def get_strategy(mode) -> tf.distribute.Strategy:
