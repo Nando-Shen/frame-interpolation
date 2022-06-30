@@ -26,7 +26,7 @@ training.learning_rate = 0.0002
 training.learning_rate_decay_steps = 750000
 training.learning_rate_decay_rate = 0.464158
 training.learning_rate_staircase = True
-training.num_steps = 30000
+training.num_steps = 60000
 
 # in the sweep
 # training_dataset.file = 'gs://xcloud-shared/fitsumreda/frame_interpolation/datasets/vimeo_interp_train.tfrecord@200'
@@ -57,8 +57,8 @@ training_losses.loss_weight_schedules = [
 # Increase the weight of style loss at 1.5M steps.
 training_losses.loss_weight_parameters = [
     {'boundaries':[0], 'values':[1.0, 1.0]},
-    {'boundaries':[15000], 'values':[1.0, 0.25]},
-    {'boundaries':[15000], 'values':[0.0, 40.0]}]
+    {'boundaries':[30000], 'values':[1.0, 0.25]},
+    {'boundaries':[30000], 'values':[0.0, 40.0]}]
 
 test_losses.loss_names = ['l1', 'psnr', 'ssim']
 test_losses.loss_weights = [1.0, 1.0, 1.0]
