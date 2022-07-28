@@ -14,8 +14,8 @@
 # ==============================================================================
 model.name = 'film_net'
 
-film_net.pyramid_levels = 7
-film_net.fusion_pyramid_levels = 5
+film_net.pyramid_levels = 6
+film_net.fusion_pyramid_levels = 4
 film_net.specialized_levels = 3
 film_net.sub_levels = 4
 film_net.flow_convs = [3, 3, 3, 3]
@@ -26,11 +26,11 @@ training.learning_rate = 0.0001
 training.learning_rate_decay_steps = 750000
 training.learning_rate_decay_rate = 0.464158
 training.learning_rate_staircase = True
-training.num_steps = 200002
+training.num_steps = 150000
 
 # in the sweep
 training_dataset.file = 'atd12k_tfrecords/new_output_train_tfrecord_filepath@5'
-training_dataset.batch_size = 8
+training_dataset.batch_size = 4
 training_dataset.crop_size = 224
 
 eval_datasets.batch_size = 1
